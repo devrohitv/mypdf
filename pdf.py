@@ -125,5 +125,3 @@ class PdfView:
     def update_viewport(self, *args):
         Window.update_viewport()
 
-
-MyApp().run()
