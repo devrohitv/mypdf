@@ -44,7 +44,7 @@ jobs:
           
       - name: build ios ipa
         run: |
-          # toolchain build python3 kivy
+          source .venv/bin/activate
           buildozer -v ios debug
 
       - name: Upload artifacts
