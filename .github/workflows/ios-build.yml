@@ -41,6 +41,7 @@ jobs:
           echo $GST_PLUGIN_PATH
           source .venv/bin/activate
           python3 -m pip install --upgrade pip virtualenv kivy-ios
+          python3 -m pip install docutils
           
       - name: build ios ipa
         run: |
