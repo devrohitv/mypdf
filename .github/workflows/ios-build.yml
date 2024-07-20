@@ -28,6 +28,7 @@ jobs:
           python3 -m pip install --user --upgrade pip virtualenv kivy-ios
           
       - name: build ios ipa
+        run: |
           toolchain build python3 kivy
 
       - name: Upload artifacts
