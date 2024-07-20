@@ -25,7 +25,10 @@ jobs:
       
       - name: Build with Buildozer
         run: |
-          pip3 install --user --upgrade buildozer
+          python3 -m venv .venv
+          source .venv/bin/activate
+          
+          python3 -m pip install --user --upgrade buildozer
           brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer autoconf automake
           python3 -m pip install --user --upgrade pip virtualenv kivy-ios
           
