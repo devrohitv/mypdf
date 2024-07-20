@@ -30,7 +30,16 @@ jobs:
           
           python3 -m pip install --upgrade buildozer
           brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer autoconf automake
-          python3 -m pip install --user --upgrade pip virtualenv kivy-ios
+
+      - name: GST_PLUGIN_PATH
+        run: |
+          echo 'export GST_PLUGIN_PATH="~/.local/lib/gstreamer-1.0"' >> ~/.bashrc
+          source ~/.bashrc
+      - name : varify gst plugin path
+        run: |
+          echo $GST_PLUGIN_PATH
+          
+          python3 -m pip install --upgrade pip virtualenv kivy-ios
           
       - name: build ios ipa
         run: |
