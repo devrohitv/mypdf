@@ -18,8 +18,7 @@ jobs:
 
       - name: Remove Junk Files
         run: |
-          buildozer ios clean
-          find /Users/runner/work/mypdf/mypdf/.buildozer/ios/platform/kivy-ios/build/sdl2_mixer/ -type f -name "*.sh" -delete
+          buildozer ios appclean
 
       - name: Build with Buildozer
         run: |
