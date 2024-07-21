@@ -16,10 +16,6 @@ jobs:
         with:
           python-version: '3.10' 
 
-      - name: Remove Junk Files
-        run: |
-          buildozer ios appclean
-
       - name: Build with Buildozer
         run: |
           python3 --version
@@ -27,6 +23,7 @@ jobs:
           source .venv/bin/activate
           
           python3 -m pip install --upgrade buildozer
+          buildozer ios appclean
           python3 -m pip install sdl2_ttf sdl2_mixer
 
       - name: brew packages in its path
