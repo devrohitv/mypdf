@@ -24,7 +24,6 @@ jobs:
           
           python3 -m pip install --upgrade buildozer
           buildozer ios clean
-          python3 -m pip install sdl2_ttf sdl2_mixer
 
       - name: brew packages in its path
         run: |
