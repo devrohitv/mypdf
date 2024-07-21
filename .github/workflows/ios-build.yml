@@ -23,7 +23,7 @@ jobs:
           source .venv/bin/activate
           
           python3 -m pip install --upgrade buildozer
-          buildozer ios appclean
+          buildozer ios clean
           python3 -m pip install sdl2_ttf sdl2_mixer
 
       - name: brew packages in its path
