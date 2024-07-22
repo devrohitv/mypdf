@@ -41,7 +41,7 @@ jobs:
       - name: build ios ipa
         run: |
           source .venv/bin/activate
-          buildozer -v ios debug
+          buildozer ios debug
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
