@@ -41,7 +41,15 @@ jobs:
       - name: build ios ipa
         run: |
           source .venv/bin/activate
-          buildozer ios debug
+          buildozer ios debug > buildozer.log 2>&1
+      
+      - name: Upload Build Logs
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: buildozer-log
+          path: buildozer.log
+
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
